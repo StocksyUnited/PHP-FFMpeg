@@ -175,4 +175,14 @@ class VideoFilters extends AudioFilters
 
         return $this;
     }
+
+    /**
+     * Strips the Audio
+     * @param string $imagePath
+     */
+    public function stripaudio()
+    {
+        $this->media->addFilter(new StripAudioFilter($imagePath));
+    }
+
 }
